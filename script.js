@@ -4,9 +4,7 @@ const msg = document.getElementById("msg");
 
 /// computer value
 
-// let computerNumber = Math.floor(Math.random() * 100);
-let computerNumber = 2
-
+let computerNumber = Math.floor(Math.random() * 100);
 
 
 // assigning user value
