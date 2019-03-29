@@ -2,6 +2,7 @@ const input = document.querySelector("input");
 const btn1 = document.querySelector("button");
 const msg = document.getElementById("msg");
 
+
 /// computer value
 const computerValue = () => {
   let computerNumber = Math.floor(Math.random() * 100);
@@ -11,22 +12,32 @@ const computerValue = () => {
 document.addEventListener("keydown", keyStroked);
 
 
-
 btn1.onclick = function () {
-  computerValue();
-  valueCompare()
+
+  if (input.value === "") {
+    msg.textContent = "Please enter a number"
+  } else {
+    valueCompare();
+  }
 }
 
 
-function keyStroked(e) {
-  switch (e.which) {
-    case 13:
-      valueCompare();
-      break;
-    case 32:
-      valueCompare();
-      break;
 
+function keyStroked(e) {
+
+  if (input.value === "") {
+
+    msg.textContent = "Please enter a number"
+  } else {
+    switch (e.which) {
+      case 13:
+        valueCompare();
+        break;
+      case 32:
+        valueCompare();
+        break;
+
+    }
   }
 }
 //
