@@ -25,7 +25,7 @@ btn1.onclick = function () {
 
 function keyStroked(e) {
 
-  if (input.value === "") {
+  if ((input.value === "" && e.which === 13) || (input.value === "" && e.which === 32)) {
 
     msg.textContent = "Please enter a number"
   } else {
@@ -40,7 +40,7 @@ function keyStroked(e) {
     }
   }
 }
-//
+
 
 function valueCompare() {
 
